@@ -1,5 +1,0 @@
-{
-"hooks": {
-"pre-push": "set CI=true&&npm test"
-}
-}
