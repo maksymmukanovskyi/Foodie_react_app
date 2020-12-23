@@ -16,5 +16,3 @@ export const getArticlesByQuery = (query = '') => {
     return mapper(response.data.hits);
   });
 };
-
-console.log(process.env.API_KEY);
