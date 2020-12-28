@@ -2,6 +2,7 @@ import React from 'react';
 import Logo from './Logo';
 import appLogo from '../avatar.jpg';
 import Navigation from './Navigation';
+import UserMenu from './UserMenu';
 
 const navItems = ['menu', 'about', 'contact', 'delivery'];
 
@@ -13,7 +14,9 @@ const AppHeader = () => (
     <div className="menu">
       <Navigation items={navItems} />
     </div>
-    <div className="usermenu">usermenu</div>
+    <div className="usermenu">
+      <UserMenu />
+    </div>
   </header>
 );
 
