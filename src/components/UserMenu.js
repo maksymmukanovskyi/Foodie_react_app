@@ -14,6 +14,11 @@ export default class UserMenu extends Component {
     window.addEventListener('click', this.handleWindowClick);
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    const { isDropDownOpen } = this.state;
+    return nextState.isDropDownOpen !== isDropDownOpen;
+  }
+
   componentWillUnmount() {
     window.removeEventListener('click', this.handleWindowClick);
   }
@@ -25,21 +30,25 @@ export default class UserMenu extends Component {
 
     const { isDropDownOpen } = this.state;
     if (!isTargetInsideContainer && isDropDownOpen) {
-      this.toggleDropDown();
+      this.closeDropDown();
     }
   };
 
-  toggleDropDown = () => {
-    this.setState(state => ({
-      isDropDownOpen: !state.isDropDownOpen,
-    }));
+  openDropDown = () => {
+    this.setState({ isDropDownOpen: true });
+  };
+
+  closeDropDown = () => {
+    this.setState({ isDropDownOpen: false });
   };
 
   render() {
     const { isDropDownOpen } = this.state;
+    console.log('render');
+
     return (
       <div
-        onClick={this.toggleDropDown}
+        onClick={this.openDropDown}
         className="UserMenu"
         ref={this.containerRef}
       >
