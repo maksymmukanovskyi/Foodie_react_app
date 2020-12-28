@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 import AppHeader from './AppHeader';
 
 export default class App extends Component {
-  state = {
-    
-  }
+  state = {};
+
   render() {
     return (
       <div>
-        <AppHeader/>
+        <AppHeader />
       </div>
     );
   }

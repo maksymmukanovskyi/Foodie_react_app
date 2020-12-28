@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Logo = ({ image = '', width = 60, height = 60 }) => (
+const Logo = ({ image = '', width = 150, height = 95 }) => (
   <img src={image} alt="site logo" width={width} height={height} />
 );
 
