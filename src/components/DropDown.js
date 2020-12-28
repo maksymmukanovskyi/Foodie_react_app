@@ -1,7 +1,7 @@
 import React from 'react';
 
 const DropDown = () => (
-  <div>
+  <div className="DropDown">
     Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem
     Lorem
     <button type="button">Logout</button>

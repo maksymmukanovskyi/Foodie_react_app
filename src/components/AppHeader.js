@@ -7,14 +7,14 @@ import UserMenu from './UserMenu';
 const navItems = ['menu', 'about', 'contact', 'delivery'];
 
 const AppHeader = () => (
-  <header>
-    <div className="logo">
+  <header className="Header">
+    <div className="Header__logo">
       <Logo image={appLogo} width={250} height={195} />
     </div>
     <div className="menu">
       <Navigation items={navItems} />
     </div>
-    <div className="usermenu">
+    <div className="Header__usermenu">
       <UserMenu />
     </div>
   </header>
