@@ -3,6 +3,7 @@ import Logo from './Logo';
 import appLogo from '../avatar.jpg';
 import Navigation from './Navigation';
 import UserMenu from './UserMenu';
+// import avatar from '../avatar.jpg';
 
 const navItems = ['Menu', 'About', 'Contact', 'Delivery'];
 
@@ -15,7 +16,7 @@ const AppHeader = () => (
       <Navigation items={navItems} />
     </div>
     <div>
-      <UserMenu />
+      <UserMenu avatar={appLogo} name="Bob Marley" />
     </div>
   </header>
 );

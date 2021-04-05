@@ -5,7 +5,26 @@ html {
 *, *::before, *::after {
     box-sizing: inherit;
 }
+.Backdrop {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vw;
+    background-color: rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.ModalWindow{
+    max-width: 800px;
+    max-height: 500px;
+    background-color: #fff;
+    padding: 16px;
+    position: relative;
+    transform: translate(0%, -200%);
+}
 
 .UserMenu {
     position : relative;

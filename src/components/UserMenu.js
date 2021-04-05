@@ -1,7 +1,6 @@
 import React, { Component, createRef } from 'react';
 import DropDown from './DropDown';
 import Avatar from './Avatar';
-// import avatar from '../avatar.jpg';
 
 class UserMenu extends Component {
   containerRef = createRef();
