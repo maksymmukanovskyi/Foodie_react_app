@@ -1,14 +1,22 @@
 import React from 'react';
 import Logo from './Logo';
 import appLogo from '../avatar.jpg';
+import Navigation from './Navigation';
+import UserMenu from './UserMenu';
+
+const navItems = ['Menu', 'About', 'Contact', 'Delivery'];
 
 const AppHeader = () => (
-  <header>
-    <div className="logo">
+  <header className="Header">
+    <div className="Header__logo">
       <Logo image={appLogo} />
     </div>
-    <div className="menu">menu</div>
-    <div className="userNmae">user name</div>
+    <div className="Header__usermenu">
+      <Navigation items={navItems} />
+    </div>
+    <div>
+      <UserMenu />
+    </div>
   </header>
 );
 
