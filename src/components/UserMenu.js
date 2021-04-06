@@ -46,11 +46,12 @@ class UserMenu extends Component {
   };
 
   render() {
+    console.log(this.containerRef);
     const { isDropDownOpen } = this.state;
     const { name, avatar } = this.props;
     return (
       <div
-        onKeyDown={this.toggleDropDown}
+        // onKeyDown={this.toggleDropDown}
         onClick={this.openDropDown}
         className="UserMenu"
         ref={this.containerRef}

@@ -19,6 +19,14 @@ class App extends Component {
     });
   };
 
+  handleWindowClick = (e, ref) => {
+    const isTargetInsideContainer = ref.contains(e.target);
+    const { isModalOpen } = this.state;
+    if (!isTargetInsideContainer && isModalOpen) {
+      this.closeModal();
+    }
+  };
+
   render() {
     const { isModalOpen } = this.state;
     return (
@@ -27,7 +35,12 @@ class App extends Component {
         <button type="button" onClick={this.openModal}>
           Open modal!
         </button>
-        {isModalOpen && <Modal onClose={this.closeModal} />}
+        {isModalOpen && (
+          <Modal
+            onModalClick={this.handleWindowClick}
+            onClose={this.closeModal}
+          />
+        )}
       </div>
     );
   }
