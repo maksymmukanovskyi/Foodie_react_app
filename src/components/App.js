@@ -29,7 +29,6 @@ class App extends Component {
 
   render() {
     const { isModalOpen } = this.state;
-    console.log('RENDER');
 
     return (
       <div>

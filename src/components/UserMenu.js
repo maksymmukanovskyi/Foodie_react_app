@@ -51,7 +51,7 @@ class UserMenu extends Component {
     return (
       <div
         // onKeyDown={this.toggleDropDown}
-        onClick={this.openDropDown}
+        // onClick={this.openDropDown}
         className="UserMenu"
         ref={this.containerRef}
       >
