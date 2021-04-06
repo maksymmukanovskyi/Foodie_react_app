@@ -7,6 +7,7 @@ class Modal extends Component {
 
   render() {
     const { onClose, onModalClick } = this.props;
+
     return (
       <div
         className="Backdrop"
