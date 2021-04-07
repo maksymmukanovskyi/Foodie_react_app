@@ -14,6 +14,8 @@ class UserMenu extends Component {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
+    // console.log('usermenu');
+
     const { isDropDownOpen } = this.state;
     return nextState.isDropDownOpen !== isDropDownOpen;
   }
@@ -51,7 +53,7 @@ class UserMenu extends Component {
     return (
       <div
         // onKeyDown={this.toggleDropDown}
-        // onClick={this.openDropDown}
+        onClick={this.openDropDown}
         className="UserMenu"
         ref={this.containerRef}
       >

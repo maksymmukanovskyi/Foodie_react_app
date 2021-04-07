@@ -4,21 +4,22 @@ class Modal extends Component {
   containerRef = createRef();
 
   componentDidMount() {
-    window.addEventListener('keydown', this.handleKey);
+    window.addEventListener('keydown', this.keyPressHandler);
   }
 
-  handleKey = e => {
-    console.log(e.keyCode === 27);
+  shouldComponentUpdate(nextProps) {
+    const { isModalOpen } = this.props;
+    return nextProps.isModalOpen !== isModalOpen;
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('keydown', this.keyPressHandler);
+  }
+
+  keyPressHandler = e => {
+    const { onClose } = this.props;
+    return e.key === 'Escape' ? onClose() : null;
   };
-
-  // shouldComponentUpdate(nextProps, nextState) {
-  //   const { isModalOpen } = this.state;
-  //   return nextState.isModalOpen !== isModalOpen;
-  // }
-
-  // componentWillUnmount() {
-  //   window.removeEventListener('onKeyPress', this.handleWindowClick);
-  // }
 
   render() {
     const { onClose, onModalClick } = this.props;

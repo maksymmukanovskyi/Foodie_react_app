@@ -38,6 +38,7 @@ class App extends Component {
         </button>
         {isModalOpen && (
           <Modal
+            isModalOpen={isModalOpen}
             onModalClick={this.handleWindowClick}
             onClose={this.closeModal}
           />
