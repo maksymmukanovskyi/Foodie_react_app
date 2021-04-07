@@ -1,7 +1,6 @@
 import React, { Component, createRef } from 'react';
 import DropDown from './DropDown';
 import Avatar from './Avatar';
-// import avatar from '../avatar.jpg';
 
 class UserMenu extends Component {
   containerRef = createRef();
@@ -15,6 +14,8 @@ class UserMenu extends Component {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
+    // console.log('usermenu');
+
     const { isDropDownOpen } = this.state;
     return nextState.isDropDownOpen !== isDropDownOpen;
   }
@@ -51,7 +52,7 @@ class UserMenu extends Component {
     const { name, avatar } = this.props;
     return (
       <div
-        onKeyDown={this.toggleDropDown}
+        // onKeyDown={this.toggleDropDown}
         onClick={this.openDropDown}
         className="UserMenu"
         ref={this.containerRef}
