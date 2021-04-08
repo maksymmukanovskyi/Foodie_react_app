@@ -2,8 +2,10 @@ import React from 'react';
 
 import ReactDOM from 'react-dom';
 
-import App from './components/App';
+// import App from './components/App';
+
+import MenuPage from './components/MenuPage';
 
 import './index.css';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<MenuPage />, document.getElementById('root'));
